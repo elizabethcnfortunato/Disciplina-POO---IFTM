@@ -8,6 +8,6 @@ COMO FAZER PARA DETECTAR CLASSES NÃO COESAS?
 Classes não coesas, implementam mais de uma responsabilidade em seu corpo, o que podem 
 gerar maior quantidade de erros.
 
-O QUE FAZER COM CLASSES NÃO COESAS?
+/*O QUE FAZER COM CLASSES NÃO COESAS?
 Separar cada responsabilidade em um arquivo/classes diferentes.
-Precisamos encapsular melhor todo esse problema.
+Precisamos encapsular melhor todo esse problema.*/

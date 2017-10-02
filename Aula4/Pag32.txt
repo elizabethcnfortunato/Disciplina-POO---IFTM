@@ -1,0 +1,23 @@
+VOCÊ CONSEGUE RESOLVER O PROBLEMA DA COESÃO NESTE EXEMPLO DO LIVRO SEM USAR ENUM?
+
+Retiramos o Enum e transformando em classe utilizando e definindo as regras no construtor.
+public class Cargo {
+
+		private RegraDeCalculo regra;
+
+		Cargo(DezOuVintePorCento desenvolvedor) {
+			this.regra = desenvolvedor;
+		}
+
+		Cargo(QuinzeOuVinteCincoPorCento dbaTester) {
+			this.regra = dbaTester;
+		}
+
+		Cargo(OutraRegra gerente) {
+			this.regra = gerente;
+		}
+
+		public RegraDeCalculo getRegra() {
+			return regra;
+		}
+}

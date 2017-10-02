@@ -1,0 +1,4 @@
+COMO FAZER PARA RESOLVER O PROBLEMA DO ACOPLAMENTO?
+
+O acoplamento deve ser o minimo possível, mais ele sempre existirá.
+O ideal é que as classes dependentes sejam mais estáveis possíveis.

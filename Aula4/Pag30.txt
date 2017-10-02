@@ -1,0 +1,13 @@
+O QUE É UMA CLASSE COESA?
+De acordo com o Livro SOLID para Ninjas, uma classe coesa é aquela que possui uma única responsabilidade.
+Ou seja, ela não toma conta de mais de um conceito no sistema. Se
+a classe é responsável por representar uma Nota Fiscal, ela representa apenas
+isso.
+
+COMO FAZER PARA DETECTAR CLASSES NÃO COESAS?
+Classes não coesas, implementam mais de uma responsabilidade em seu corpo, o que podem 
+gerar maior quantidade de erros.
+
+O QUE FAZER COM CLASSES NÃO COESAS?
+Separar cada responsabilidade em um arquivo/classes diferentes.
+Precisamos encapsular melhor todo esse problema.

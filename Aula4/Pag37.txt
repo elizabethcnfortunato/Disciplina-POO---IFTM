@@ -1,0 +1,73 @@
+Exercícios pag. 37:
+
+CRIAR CLASSES DE TESTE PARA TODOS OS EXEXMPLOS DA AULA E MOSTRAR(COM COMENTÁRIOS) ONDE ACONTECEU A APLICAÇÃO DOS PRINCIPIOS SRP E DIP.
+
+//TESTE DIP.SEGUNDO
+
+
+public class Teste {
+
+	public static void main(String[] args) {
+
+		/* Utilização de interfaces coesas */
+		List<AcaoAposGerarNota> ListAcoes = new ArrayList<AcaoAposGerarNota>();
+
+		ListAcoes.add(new EnviadorDeEmail());
+		ListAcoes.add(new NotaFiscalDao());
+
+
+		/ * Depêndencia com Classes Estáveis.*/
+		
+		GeradorDeNotaFiscal geradorDeNotaFiscal = new GeradorDeNotaFiscal(acoes);
+
+		/* Classes com responsabilidades únicas */
+		NotaFiscal nf = geradorDeNotaFiscal.gera(new Fatura());
+
+		// Resultados
+		System.out.println("Valor Da Nota: " + nf.getValor());
+		System.out.println("Valor Imposto Nota: " + nf.getImpostoSimplesSobreO());
+	}
+}
+
+
+
+//TESTE REFATORANDO
+
+//Teste Calculadora, exemplo de aplicação do SRP;
+
+public class Teste {
+	public static void main(String[] args) {
+		/*Coesão - Classes com única responsabilidade! */
+
+		Funcionario func1 = new Funcionario(Cargo.DESENVOLVEDOR, 150);
+		Funcionario func2 = new Funcionario(Cargo.DBA, 200);
+
+		/* Métodos possuem responsabilidades bem definidas dentro das classes */
+
+		CalculadoraDeSalario calc = new CalculadoraDeSalario();
+		System.out.println(calc.calcula(func1));
+		System.out.println(calc.calcula(func2));
+	}
+}
+
+
+//TESTE PRATICA
+
+
+
+public class Teste {
+	public static void main(String[] args) {
+		/*Coesão - Classe e métodos com responsabilidade única! */
+
+		DebitoContaCorrente debito = new DebitoContaCorrente();
+		debito.ValidarSaldo(200);
+		debito.DebitarConta(150);
+		debito.EmitirComprovante();
+
+
+	}
+}
+
+
+
+
